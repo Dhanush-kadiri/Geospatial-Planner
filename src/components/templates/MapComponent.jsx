@@ -171,7 +171,7 @@ const MapComponent = () => {
     } else if (drawingType === "LineString" && lineCoordinates.length > 0) {
       setMissionModalOpen(true);
     } else {
-      alert("At least one click on Enter is needed to generate a report.");
+      alert("Please finalise the points by clicking enter key or dual tapping on the last point");
     }
 
     setIsFinalized(true);
