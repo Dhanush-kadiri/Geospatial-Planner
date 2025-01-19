@@ -1,0 +1,138 @@
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  z-index: 1000;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.close-btn {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  float: right;
+  font-size: 1em;
+}
+
+.close-btn:hover {
+  background-color: #ff4500;
+}
+
+.coordinates-list {
+  margin-top: 20px;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.coordinate-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.coordinate-row.headings {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.coordinate-row div {
+  flex: 1;
+  text-align: center;
+}
+
+.total-distance {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.total-distance strong {
+  color: #2e8b57;
+}
+
+/* Media Queries */
+
+/* Large Screens and Desktops (1200px and above) */
+@media (min-width: 1200px) {
+  .modal {
+    width: 50%;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  .close-btn {
+    padding: 12px;
+    font-size: 1.1em;
+  }
+}
+
+/* Tablets and Small Desktops (768px to 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .modal {
+    width: 70%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  .close-btn {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  .coordinates-list {
+    max-height: 300px;
+  }
+}
+
+/* Mobile Devices (below 768px) */
+@media (max-width: 767px) {
+  .modal {
+    width: 90%;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+
+  .close-btn {
+    padding: 6px;
+    font-size: 0.8em;
+  }
+
+  .coordinates-list {
+    max-height: 250px;
+  }
+
+  .total-distance {
+    font-size: 1em;
+  }
+
+  .coordinate-row div {
+    font-size: 0.9em;
+  }
+}
